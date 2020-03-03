@@ -21,7 +21,6 @@ class Instructors extends Migration
         Schema::create('instructors',function (Blueprint $table){
 
         $table->increments('id');
-        
         $table->String('name');
         
         $table->String('email');
