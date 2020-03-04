@@ -29,24 +29,20 @@ class GearItems extends Migration
         $table->longText('notes');
         $table->date('manufactured_at');
         $table->boolean('inherit_cycles');
-        $table->boolean('serviced_by_cycle');
-        
+        $table->boolean('serviced_by_cycle'); 
         $table->integer('due_cycles');
-        
         $table->date('due_date');
-        
+
         /**
          * Foreignkeys section
          */
-        
+
         $table->integer('item_id')->unsigned()->nullable();
         $table->foreign('item_id')->references('id')->on('items')->onDelete('cascade');
         
         $table->integer('gear_set_id')->unsigned()->nullable();
         $table->foreign('gear_set_id')->references('id')->on('gear_sets')->onDelete('cascade');
-        
-        
-        
+
         // type your addition here
 
         });
