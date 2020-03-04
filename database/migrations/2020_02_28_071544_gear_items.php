@@ -21,21 +21,14 @@ class GearItems extends Migration
         Schema::create('gear_items',function (Blueprint $table){
 
         $table->increments('id');
-        
+
         $table->String('name');
-        
         $table->integer('SN');
-        
         $table->String('whereabouts');
-        
         $table->longText('Description');
-        
         $table->longText('notes');
-        
         $table->date('manufactured_at');
-        
         $table->boolean('inherit_cycles');
-        
         $table->boolean('serviced_by_cycle');
         
         $table->integer('due_cycles');

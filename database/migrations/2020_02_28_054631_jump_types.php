@@ -20,20 +20,17 @@ class JumpTypes extends Migration
     {
         Schema::create('jump_types',function (Blueprint $table){
 
-        $table->increments('id');
-        
-        $table->String('name');
-        $table->Integer('price');
-        
-        /**
-         * Foreignkeys section
-         */
-        
-        
-        $table->timestamps();
-        
-        
-        // type your addition here
+            $table->increments('id');
+            $table->String('name');
+            $table->Integer('price');
+
+            /**
+             * Foreignkeys section
+             */
+
+            $table->timestamps();
+
+            // type your addition here
 
         });
     }

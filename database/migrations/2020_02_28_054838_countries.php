@@ -20,21 +20,17 @@ class Countries extends Migration
     {
         Schema::create('countries',function (Blueprint $table){
 
-        $table->increments('id');
-        
-        $table->String('name');
-        
-        $table->String('code');
-        
-        /**
-         * Foreignkeys section
-         */
-        
-        
-        $table->timestamps();
-        
-        
-        // type your addition here
+            $table->increments('id');
+            $table->String('name');
+            $table->String('code');
+
+            /**
+             * Foreignkeys section
+             */
+
+            $table->timestamps();
+
+            // type your addition here
 
         });
     }
