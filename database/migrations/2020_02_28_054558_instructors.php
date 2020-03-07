@@ -19,22 +19,17 @@ class Instructors extends Migration
     public function up()
     {
         Schema::create('instructors',function (Blueprint $table){
+            $table->increments('id');
+            $table->String('name');
+            $table->String('email');
 
-        $table->increments('id');
-        $table->String('name');
-        
-        $table->String('email');
-        
-        /**
-         * Foreignkeys section
-         */
-        
-        
-        $table->timestamps();
-        
-        
-        // type your addition here
+            /**
+             * Foreignkeys section
+             */
 
+            $table->timestamps();
+
+            // type your addition here
         });
     }
 
