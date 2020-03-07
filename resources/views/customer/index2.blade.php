@@ -1,4 +1,4 @@
-@extends('layouts.manifesting.app', ['pageSlug' => 'dashboard'])
+@extends('scaffold-interface.layouts.app', ['pageSlug' => 'dashboard'])
 @section('title','Index')
 @section('content')
 <section class="content">
@@ -6,7 +6,8 @@
         Customer Index
     </h1>
     <a href='{!!url("customer")!!}/create' class = 'btn btn-success'><i class="fa fa-plus"></i> New</a>
-    <!--<div class="dropdown">
+    <br>
+    <div class="dropdown">
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Associate <span class="caret"></span> </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
             <li><a href="http://localhost:8000/agent">Agent</a></li>
@@ -14,9 +15,8 @@
             <li><a href="http://localhost:8000/jump_type">Jump_type</a></li>
             <li><a href="http://localhost:8000/transport_type">Transport_type</a></li>
         </ul>
-    </div>-->
+    </div>
     <br>
-    
     <table class = "table table-striped table-bordered table-hover" style = 'background:#fff'>
         <thead>
             <th>name</th>
