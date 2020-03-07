@@ -21,7 +21,6 @@ class Gears extends Migration
         Schema::create('gears',function (Blueprint $table){
 
         $table->increments('id');
-        
         $table->String('name');
         
         /**

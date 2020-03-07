@@ -21,19 +21,15 @@ class Agents extends Migration
         Schema::create('agents',function (Blueprint $table){
 
         $table->increments('id');
-        
         $table->String('name');
-        
         $table->String('email');
-        
+
         /**
          * Foreignkeys section
          */
-        
-        
+
         $table->timestamps();
-        
-        
+
         // type your addition here
 
         });

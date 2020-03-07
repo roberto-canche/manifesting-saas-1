@@ -21,7 +21,6 @@ class Items extends Migration
         Schema::create('items',function (Blueprint $table){
 
         $table->increments('id');
-        
         $table->String('name');
         
         /**
