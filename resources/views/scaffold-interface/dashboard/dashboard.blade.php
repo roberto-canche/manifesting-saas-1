@@ -53,9 +53,9 @@
 			</div>
 		</div>
 		<!-- list all entities, Development mode-->
-		@foreach($entities as $entity)
+		<!-- @foreach($entities as $entity)
 		<div class="col-lg-3 col-xs-6">
-			<!-- small box -->
+			 small box 
 			<div class="small-box bg-green">
 				<div class="inner">
 					<h3>{{$entity->tablename}}</h3>
@@ -67,7 +67,7 @@
 				<a href="{{url('/')}}/{{lcfirst(str_singular($entity->tablename))}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
 			</div>
 		</div>
-		@endforeach
+		@endforeach -->
 	</div>
 </section>
 @endsection

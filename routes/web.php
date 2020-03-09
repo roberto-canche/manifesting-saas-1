@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('customer/fill','CustomerController@fill');
 
 Auth::routes();
 
@@ -80,6 +81,7 @@ Route::group(['middleware'=> 'web'],function(){
   Route::post('customer/{id}/update','\App\Http\Controllers\CustomerController@update');
   Route::get('customer/{id}/delete','\App\Http\Controllers\CustomerController@destroy');
   Route::get('customer/{id}/deleteMsg','\App\Http\Controllers\CustomerController@DeleteMsg');
+  Route::get('customer/fill','CustomerController@fill');
 });
 
 //gear Routes
