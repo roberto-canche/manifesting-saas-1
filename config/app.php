@@ -169,6 +169,7 @@ return [
         /*
          * Package Service Providers...
          */
+        CrudGenerator\CrudGeneratorServiceProvider::class,  
 
         /*
          * Application Service Providers...

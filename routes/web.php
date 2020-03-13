@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('customer/fill','CustomerController@fill');
+Route::get('customer/recepction','CustomerController@recepction');
 
 Auth::routes();
 
@@ -34,7 +35,9 @@ Route::group(['middleware'=> 'web'],function(){
 });
 
 Route::group(['middleware'=> 'web'],function(){
+
 });
+
 //agent Routes
 Route::group(['middleware'=> 'web'],function(){
   Route::resource('agent','\App\Http\Controllers\AgentController');
