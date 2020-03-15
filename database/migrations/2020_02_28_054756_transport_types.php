@@ -20,19 +20,16 @@ class TransportTypes extends Migration
     {
         Schema::create('transport_types',function (Blueprint $table){
 
-        $table->increments('id');
-        
-        $table->String('name');
-        
-        /**
-         * Foreignkeys section
-         */
-        
-        
-        $table->timestamps();
-        
-        
-        // type your addition here
+            $table->increments('id');
+            $table->String('name');
+
+            /**
+             * Foreignkeys section
+             */
+
+            $table->timestamps();
+
+            // type your addition here
 
         });
     }

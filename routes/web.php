@@ -80,7 +80,8 @@ Route::group(['middleware'=> 'web'],function(){
 
 //customer Routes
 Route::group(['middleware'=> 'web'],function(){
-  Route::resource('customer','\App\Http\Controllers\CustomerController');
+  Route::resource('customer', 'CustomerController');
+  Route::get('customer2', 'CustomerController@test');
   Route::post('customer/{id}/update','\App\Http\Controllers\CustomerController@update');
   Route::get('customer/{id}/delete','\App\Http\Controllers\CustomerController@destroy');
   Route::get('customer/{id}/deleteMsg','\App\Http\Controllers\CustomerController@DeleteMsg');
@@ -89,7 +90,7 @@ Route::group(['middleware'=> 'web'],function(){
 
 //gear Routes
 Route::group(['middleware'=> 'web'],function(){
-  Route::resource('gear','\App\Http\Controllers\GearController');
+  Route::resource('gear','GearController');
   Route::post('gear/{id}/update','\App\Http\Controllers\GearController@update');
   Route::get('gear/{id}/delete','\App\Http\Controllers\GearController@destroy');
   Route::get('gear/{id}/deleteMsg','\App\Http\Controllers\GearController@DeleteMsg');

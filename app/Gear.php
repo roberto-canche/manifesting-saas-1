@@ -20,4 +20,36 @@ class Gear extends Model
     protected $table = 'gears';
 
 	
+
+	/**
+     * agent.
+     *
+     * @return  \Illuminate\Support\Collection;
+     */
+    public function agents()
+    {
+        return $this->belongsToMany('App\Agent');
+    }
+
+    /**
+     * Assign a agent.
+     *
+     * @param  $agent
+     * @return  mixed
+     */
+    public function assignAgent($agent)
+    {
+        return $this->agents()->attach($agent);
+    }
+    /**
+     * Remove a agent.
+     *
+     * @param  $agent
+     * @return  mixed
+     */
+    public function removeAgent($agent)
+    {
+        return $this->agents()->detach($agent);
+    }
+
 }

@@ -38,7 +38,14 @@ class CustomerController extends Controller
     {
         $title = 'Index - customer';
         $customers = Customer::paginate(6);
-        return view('customer.index',compact('customers','title'));
+        return view('customer.index', compact('customers','title'));
+    }
+
+    public function test()
+    {
+        $title = 'Index - customer';
+        $customers = Customer::paginate(6);
+        return view('customer.index2', compact('customers','title'));
     }
 
     /**
