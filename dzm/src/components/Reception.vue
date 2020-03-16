@@ -1,10 +1,12 @@
 <template>
-
-    <div class="content-wrapper">
+  <div class="content-wrapper">{{info}}</div>
     
-        <header class="content-header">
+</template>
+<!-- 
+    <div class="content-wrapper">
+         <header class="content-header">
         <h1>Reception</h1>
-    {{ info }}
+    
         </header>
         
         
@@ -27,7 +29,26 @@
                 </form>
                         
                         <a href="#">Get Waiver</a>
-            </section>
-    </div>
+            </section> 
+    </div> -->
+<script>
+import axios from 'axios'
 
-</template>
+export default {
+  name: "Reception",
+  data () {
+    return {
+
+      info : null
+
+    }
+  },
+  mounted () {
+
+    axios
+      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .then(response => (this.info = response))  
+  },
+
+};
+</script>

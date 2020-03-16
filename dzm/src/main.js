@@ -23,11 +23,11 @@ new Vue({
 
 data () {
     return {
-    
+
     }
   },
   mounted () {
-    
+
   },
 
   router,
