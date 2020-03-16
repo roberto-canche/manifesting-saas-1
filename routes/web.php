@@ -84,12 +84,11 @@ Route::group(['middleware'=> 'web'],function(){
 });
 
 //gear Routes
-Route::group(['middleware'=> 'web'],function(){
-  Route::resource('gear','GearController');
-  Route::post('gear/{id}/update','\App\Http\Controllers\GearController@update');
-  Route::get('gear/{id}/delete','\App\Http\Controllers\GearController@destroy');
-  Route::get('gear/{id}/deleteMsg','\App\Http\Controllers\GearController@DeleteMsg');
-});
+Route::get('/gear','GearController@index');
+Route::get('gear/{any}','GearController@index')->where('any', '.*');
+//Route::post('gear/{id}/update','\App\Http\Controllers\GearController@update');
+//Route::get('gear/{id}/delete','\App\Http\Controllers\GearController@destroy');
+//Route::get('gear/{id}/deleteMsg','\App\Http\Controllers\GearController@DeleteMsg');
 
 Route::group(['middleware'=> 'web'],function(){
 });
