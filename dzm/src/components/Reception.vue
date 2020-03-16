@@ -1,8 +1,6 @@
 <template>
-  <div class="content-wrapper">{{info}}</div>
-    
-</template>
-<!-- 
+  <div class="content-wrapper">{{info}}
+
     <div class="content-wrapper">
          <header class="content-header">
         <h1>Reception</h1>
@@ -30,9 +28,12 @@
                         
                         <a href="#">Get Waiver</a>
             </section> 
-    </div> -->
+    </div>
+  </div>
+    
+</template>
 <script>
-import axios from 'axios'
+//import axios from 'axios'
 
 export default {
   name: "Reception",
@@ -45,10 +46,11 @@ export default {
   },
   mounted () {
 
-    axios
-      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-      .then(response => (this.info = response))  
-  },
+
+       // axios.post('https://user-api.simplybook.me/login', {"jsonrpc":"2.0","method":"getToken","params":["dzmanagement","99677be6a106d92ffc78a637c28bc6d80a63d782964512997b994325d971281c"],"id":1} )
+       //           .then(response => (this.info = response))  
+
+  }
 
 };
 </script>
