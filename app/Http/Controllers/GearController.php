@@ -26,7 +26,7 @@ class GearController extends Controller
     {
         $title = 'Index - gear';
         $gears = Gear::paginate(6);
-        return view('gear.index',compact('gears', 'title'));
+        return view('gear.index', compact('gears', 'title'));
     }
 
     /**
