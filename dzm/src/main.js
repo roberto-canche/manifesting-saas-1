@@ -2,12 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 
-
 Vue.config.productionTip = false
 
 Vue.use(VueRouter)
 
 import Reception from './components/Reception.vue';
+import vuetify from './plugins/vuetify';
 
 
 const routes = [
@@ -20,17 +20,18 @@ const router = new VueRouter({
 })
 
 new Vue({
+  data () {
+      return {
 
-data () {
-    return {
+      }
+    },
 
-    }
-  },
   mounted () {
 
   },
 
   router,
+  vuetify,
   render: h => h(Reception)
 }).$mount('#app')
 
