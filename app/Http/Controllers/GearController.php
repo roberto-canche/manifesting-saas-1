@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Gear;
+use App\Http\Resources\GearResource;
 use Illuminate\Http\Request;
 
 class GearController extends Controller
@@ -14,9 +15,11 @@ class GearController extends Controller
      */
     public function index()
     {
-        $title = 'Index - gear';
-        $gears = Gear::paginate(6);
-        return view('gear.index', compact('gears', 'title'));
+        //$title = 'Index - gear';
+        //$gears = Gear::paginate(6);
+        //return view('gear.index', compact('gears', 'title'));
+        //$this->authorize('viewAny', Gear::class);
+        return GearResource::collection(Gear::paginate(10));
     }
 
     /**

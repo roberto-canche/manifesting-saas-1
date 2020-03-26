@@ -46,9 +46,23 @@ export default {
         }
     },
 
+    created() {
+        this.fetchGears
+    },
+
     methods: {
         onSelect: function(items) {
             this.selected = items
+        },
+
+        fetchGears() {
+            axios.get('http://127.0.0.1:8000/api/gears')
+                .then(response => {
+                    console.log(response);
+                })
+                .catch(err => {
+                    console.log(err);
+                })
         }
     }
 }

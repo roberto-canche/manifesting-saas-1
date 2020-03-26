@@ -2118,9 +2118,19 @@ __webpack_require__.r(__webpack_exports__);
       }]
     };
   },
+  created: function created() {
+    this.fetchGears;
+  },
   methods: {
     onSelect: function onSelect(items) {
       this.selected = items;
+    },
+    fetchGears: function fetchGears() {
+      axios.get('/api/gears').then(function (response) {
+        console.log(response);
+      })["catch"](function (err) {
+        console.log(err);
+      });
     }
   }
 });
