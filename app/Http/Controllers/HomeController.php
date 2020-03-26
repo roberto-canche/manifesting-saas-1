@@ -26,12 +26,9 @@ class HomeController extends Controller
         return view('home');
     }
 
-<<<<<<< HEAD
-    public function gear() {
-=======
+
     public function gear()
     {
->>>>>>> frontend
         return view('gear.index');
     }
 }
