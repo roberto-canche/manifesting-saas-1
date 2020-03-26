@@ -4,7 +4,7 @@
 
 <section class="content">
     <h1>
-        Edit
+        Fill
     </h1>
     <a href="{!!url('customer')!!}" class = 'btn btn-primary'><i class="fa fa-home"></i> Customer Index</a>
     <br>
