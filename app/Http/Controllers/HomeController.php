@@ -26,8 +26,8 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function gear()
-    {
+
+    public function gear() {
         return view('gear.index');
     }
 }

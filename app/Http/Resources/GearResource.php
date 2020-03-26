@@ -18,7 +18,10 @@ class GearResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'user_id' => $this->user_id
+            'user_id' => $this->user_id,
+            'attributes' => [
+                'created_at' => $this->created_at
+            ]
         ];
     }
 }
