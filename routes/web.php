@@ -88,6 +88,7 @@ Route::group(['middleware'=> 'web'],function(){
   Route::get('customer/fill','CustomerController@fill');
 });
 
+Route::get('/gear-test','GearController@index_test');
 //gear Routes
 Route::get('/gear','GearController@index');
 Route::get('gear/{any}','GearController@index')->where('any', '.*');

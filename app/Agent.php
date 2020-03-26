@@ -3,51 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * Class Agent.
- *
- * @author  The scaffold-interface created at 2020-02-28 05:44:30pm
- * @link  https://github.com/amranidev/scaffold-interface
- */
 class Agent extends Model
 {
-	
-	
-    protected $table = 'agents';
-
-	
-
-	/**
-     * gear.
-     *
-     * @return  \Illuminate\Support\Collection;
-     */
-    public function gears()
-    {
-        return $this->belongsToMany('App\Gear');
-    }
-
-    /**
-     * Assign a gear.
-     *
-     * @param  $gear
-     * @return  mixed
-     */
-    public function assignGear($gear)
-    {
-        return $this->gears()->attach($gear);
-    }
-    /**
-     * Remove a gear.
-     *
-     * @param  $gear
-     * @return  mixed
-     */
-    public function removeGear($gear)
-    {
-        return $this->gears()->detach($gear);
-    }
-
+    //
 }

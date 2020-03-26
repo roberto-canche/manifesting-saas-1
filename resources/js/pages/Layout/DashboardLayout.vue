@@ -10,17 +10,20 @@
         </side-bar>
 
         <div class="main-panel">
+            <top-nav-bar></top-nav-bar>
+
             <dashboard-content></dashboard-content>
         </div>
     </div>
 </template>
 
 <script>
-
+import TopNavBar from './TopNavbar'
 import DashboardContent from './Content'
 
 export default {
     components: {
+        TopNavBar,
         DashboardContent
     }
 }
