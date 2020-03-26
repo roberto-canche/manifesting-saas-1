@@ -20,7 +20,7 @@ use App\Jump_type;
 
 use App\Transport_type;
 
-
+use mikehaertl\pdftk\Pdf; 
 /**
  * Class CustomerController.
  *
@@ -235,5 +235,35 @@ class CustomerController extends Controller
      	$customer = Customer::findOrfail($id);
      	$customer->delete();
         return URL::to('customer');
+    }
+
+
+    public function fill() 
+    {
+
+    
+    // Get data
+    $pdf = new Pdf('digital_waiver2019.pdf');
+
+    $pdf->fillForm([
+        'Full Name'=>'sanjay',
+        'Photo Identification Number (License/Passport)' => 'G14626555',
+        'Sex/Gender' => "Female"
+
+    ])
+        ->needAppearances()
+        ->send('dfilled.pdf');
+
+    // Check for errors
+    // if (!$pdf->send('my.pdf')) {
+
+    //     $error = $pdf->getError();
+    //     var_dump($error);
+    //     echo "hola";
+    // }
+
+    
+//return view('customer.fill',compact(''));
+
     }
 }

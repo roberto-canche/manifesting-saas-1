@@ -113,22 +113,22 @@
 						</li>
 						<li class="header">Sky Dive</li>
 						<li class="treeview"><a href="{{url('/customer')}}"><i class="fa fa-desktop"></i> 
-							<span>Booked</span></a></li>
-						<li class="treeview"><a href="{{url('/customer')}}"><i class="fa fa-desktop"></i> 
+							<span>Reception</span></a></li>
+						<!-- <li class="treeview"><a href="{{url('/customer')}}"><i class="fa fa-desktop"></i> 
 							<span>Check-in</span></a></li>
 						<li class="treeview"><a href="{{url('/customer')}}"><i class="fa fa-desktop"></i> 
 							<span>Manifest</span></a></li>
 						<li class="header">Gear Tracking</li>
 						<li class="treeview"><a href="{{url('/gear_item')}}"><i class="fa fa-desktop"></i> 
-							<span>Gear Items</span></a></li>
+							<span>Gear Items</span></a></li> 
 
-							<li class="treeview"><a href="{{url('/Gear Tracking')}}"><i class="fa fa-desktop"></i> <span>Customers</span></a></li>
+							<li class="treeview"><a href="{{url('/Gear Tracking')}}"><i class="fa fa-desktop"></i> <span>Customers</span></a></li>-->
 						<li class="header">ADMINISTRATOR</li>
 						<li class="treeview"><a href="{{url('/scaffold-users')}}"><i class="fa fa-users"></i> <span>Users</span></a></li>
 						<li class="treeview"><a href="{{url('/scaffold-roles')}}"><i class="fa fa-user-plus"></i> <span>Role</span></a></li>
 						<li class="treeview"><a href="{{url('/scaffold-permissions')}}"><i class="fa fa-key"></i> <span>Permissions</span></a></li>
-						<li class="header">Scaffold Interface</li>
-						<li class="treeview"><a href="{{url('/scaffold')}}"><i class="fa fa-desktop"></i> <span>Scaffold Interface</span></a></li>
+						<!-- <li class="header">Scaffold Interface</li>
+						<li class="treeview"><a href="{{url('/scaffold')}}"><i class="fa fa-desktop"></i> <span>Scaffold Interface</span></a></li> -->
 					</ul>
 				</section>
 				<!-- /.sidebar -->
