@@ -83,6 +83,7 @@ Route::group(['middleware'=> 'web'],function(){
   Route::get('customer/{id}/deleteMsg','\App\Http\Controllers\CustomerController@DeleteMsg');
 });
 
+Route::get('/gear-test','GearController@index_test');
 //gear Routes
 Route::get('/gear','GearController@index');
 Route::get('gear/{any}','GearController@index')->where('any', '.*');
