@@ -19,7 +19,7 @@ class GearController extends Controller
         //$gears = Gear::paginate(6);
         //return view('gear.index', compact('gears', 'title'));
         //$this->authorize('viewAny', Gear::class);
-        return GearResource::collection(Gear::paginate(10));
+        return GearResource::collection(Gear::all());
     }
 
     /**
