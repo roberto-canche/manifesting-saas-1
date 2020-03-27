@@ -9,7 +9,6 @@ import Gear from './pages/Gear'
 import AboutComponent from './components/AboutComponent'
 
 //Manifesting Saas
-import ManifestingSaas from './manifesting-saas';
 
 Vue.use(VueRouter)
 
@@ -22,8 +21,8 @@ export default new VueRouter({
             component: DashboardLayout,
             children: [
                 {
-                    path: 'gear',
-                    namr: 'Gear',
+                    path: '/',
+                    name: 'Gear',
                     component: Gear
                 }
             ]

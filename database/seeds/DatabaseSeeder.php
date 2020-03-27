@@ -2,6 +2,10 @@
 
 use Illuminate\Database\Seeder;
 
+use App\User;
+use App\Gear;
+use App\Item;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -11,6 +15,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        factory(User::class)->create([
+            'email' => 'testroot@gmail.com',
+            'password' => Hash::make('secret')
+        ]);
+
+        //factory(User::class)->create();
+        
+        factory(Gear::class)->times(20)->create();
+        factory(Item::class)->times(15)->create();
     }
 }

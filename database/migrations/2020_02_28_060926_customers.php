@@ -1,14 +1,8 @@
 <?php
-
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-/**
- * Class Customers.
- *
- * @author  The scaffold-interface created at 2020-02-28 06:09:26pm
- * @link  https://github.com/amranidev/scaffold-interface
- */
 class Customers extends Migration
 {
     /**
@@ -21,16 +15,16 @@ class Customers extends Migration
         Schema::create('customers',function (Blueprint $table){
 
             $table->increments('id');
-            $table->String('name');
-            $table->String('email');
+            /*$table->string('name');
+            $table->string('email');
             $table->float('weight');
-            $table->String('ID_type');
+            $table->string('ID_type');
 
             /**
              * Foreignkeys section
              */
 
-            $table->integer('agent_id')->unsigned()->nullable();
+            /*$table->integer('agent_id')->unsigned()->nullable();
             $table->foreign('agent_id')->references('id')->on('agents')->onDelete('cascade');
 
             $table->integer('instructor_id')->unsigned()->nullable();
@@ -40,7 +34,7 @@ class Customers extends Migration
             $table->foreign('jump_type_id')->references('id')->on('jump_types')->onDelete('cascade');
 
             $table->integer('transport_type_id')->unsigned()->nullable();
-            $table->foreign('transport_type_id')->references('id')->on('transport_types')->onDelete('cascade');
+            $table->foreign('transport_type_id')->references('id')->on('transport_types')->onDelete('cascade');*/
 
             $table->timestamps();
 

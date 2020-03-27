@@ -1,14 +1,8 @@
 <?php
-
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-/**
- * Class Transport_types.
- *
- * @author  The scaffold-interface created at 2020-02-28 05:47:56pm
- * @link  https://github.com/amranidev/scaffold-interface
- */
 class TransportTypes extends Migration
 {
     /**
