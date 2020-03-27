@@ -38,10 +38,11 @@ window.Vue.use(Vuetify);
  */
 
 
-import Reception from './components/ReceptionComponent.vue';
+import App from './components/App.vue';
+//import Reception from './components/ReceptionComponent.vue';
 
 const routes = [
-  { path: '/', component: Reception },
+  { path: '/', component: App },
 ];
 
 const router = new VueRouter({
@@ -54,5 +55,5 @@ const app = new Vue({
     router,
     vuetify: new Vuetify,
     el: '#app',
-    render: (h) => h(Reception)
+    render: (h) => h(App)
 });
