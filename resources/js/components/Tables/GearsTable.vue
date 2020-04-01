@@ -32,22 +32,13 @@ export default {
     data() {
         return {
             selected: [],
-            gears: [
-                {
-                    name:'Sign contract for'
-                },
-                {
-                    name: 'Lines from Great Russian'
-                },
-                {
-                    name: 'Flooded'
-                }
-            ]
+            gears: [],
+            pagination: {}
         }
     },
 
     created() {
-        this.fetchGears
+        this.fetchGears();
     },
 
     methods: {
@@ -58,12 +49,18 @@ export default {
         fetchGears() {
             axios.get('http://127.0.0.1:8000/api/gears')
                 .then(response => {
-                    console.log(response);
+                    //console.log(response);
+                    this.gears = response.data.data;
+                    this.makePagination({...response.data.meta, ...response.data.links})
                 })
                 .catch(err => {
                     console.log(err);
                 })
-        }
+        },
+
+        makePagination(data) {
+            this.pagination = data;
+        },
     }
 }
 </script>

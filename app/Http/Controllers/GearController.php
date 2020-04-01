@@ -19,7 +19,7 @@ class GearController extends Controller
         //$gears = Gear::paginate(6);
         //return view('gear.index', compact('gears', 'title'));
         //$this->authorize('viewAny', Gear::class);
-        return GearResource::collection(Gear::all());
+        return GearResource::collection(Gear::paginate(10));
     }
 
     /**
@@ -30,7 +30,12 @@ class GearController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $gear = request()->user()->gears()->create($this->validateData());
+        ArticleResource::withoutWrapping();
+
+        return (new ArticleResource($article))
+            ->response()
+            ->setStatusCode(Response::HTTP_CREATED);
     }
 
     /**
@@ -65,5 +70,11 @@ class GearController extends Controller
     public function destroy(Gear $gear)
     {
         //
+    }
+
+    public function validateData() {
+        return request()->validate([
+            'name' => 'required',
+        ]);
     }
 }

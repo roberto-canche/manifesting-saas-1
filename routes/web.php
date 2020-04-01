@@ -102,10 +102,10 @@ Route::group(['middleware'=> 'web'],function(){
 });
 //gear_set Routes
 Route::group(['middleware'=> 'web'],function(){
-  Route::resource('gear_set','\App\Http\Controllers\Gear_setController');
-  Route::post('gear_set/{id}/update','\App\Http\Controllers\Gear_setController@update');
-  Route::get('gear_set/{id}/delete','\App\Http\Controllers\Gear_setController@destroy');
-  Route::get('gear_set/{id}/deleteMsg','\App\Http\Controllers\Gear_setController@DeleteMsg');
+  Route::resource('gear_set','\App\Http\Controllers\GearSetController');
+  Route::post('gear_set/{id}/update','\App\Http\Controllers\GearSetController@update');
+  Route::get('gear_set/{id}/delete','\App\Http\Controllers\GearSetController@destroy');
+  Route::get('gear_set/{id}/deleteMsg','\App\Http\Controllers\GearSetController@DeleteMsg');
 });
 
 //item Routes
@@ -118,8 +118,8 @@ Route::group(['middleware'=> 'web'],function(){
 
 //gear_item Routes
 Route::group(['middleware'=> 'web'],function(){
-  Route::resource('gear_item','\App\Http\Controllers\Gear_itemController');
-  Route::post('gear_item/{id}/update','\App\Http\Controllers\Gear_itemController@update');
-  Route::get('gear_item/{id}/delete','\App\Http\Controllers\Gear_itemController@destroy');
-  Route::get('gear_item/{id}/deleteMsg','\App\Http\Controllers\Gear_itemController@DeleteMsg');
+  Route::resource('gear_item','\App\Http\Controllers\GearItemController');
+  Route::post('gear_item/{id}/update','\App\Http\Controllers\GearItemController@update');
+  Route::get('gear_item/{id}/delete','\App\Http\Controllers\GearItemController@destroy');
+  Route::get('gear_item/{id}/deleteMsg','\App\Http\Controllers\GearItemController@DeleteMsg');
 });
