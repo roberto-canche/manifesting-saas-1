@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Gear;
 use App\Http\Resources\GearResource;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class GearController extends Controller
 {
@@ -31,9 +33,9 @@ class GearController extends Controller
     public function store(Request $request)
     {
         $gear = request()->user()->gears()->create($this->validateData());
-        ArticleResource::withoutWrapping();
+        GearResource::withoutWrapping();
 
-        return (new ArticleResource($article))
+        return (new GearResource($gear))
             ->response()
             ->setStatusCode(Response::HTTP_CREATED);
     }
@@ -46,7 +48,8 @@ class GearController extends Controller
      */
     public function show(Gear $gear)
     {
-        //
+        GearResource::withoutWrapping();
+        return (new GearResource($gear));
     }
 
     /**
@@ -58,7 +61,11 @@ class GearController extends Controller
      */
     public function update(Request $request, Gear $gear)
     {
-        //
+        $gear->update($this->validateData());
+
+        return (new GearResource($gear))
+            ->response()
+            ->setStatusCode(Response::HTTP_OK);
     }
 
     /**
@@ -69,7 +76,8 @@ class GearController extends Controller
      */
     public function destroy(Gear $gear)
     {
-        //
+        $article->delete();
+        return response([], Response::HTTP_NO_CONTENT);
     }
 
     public function validateData() {

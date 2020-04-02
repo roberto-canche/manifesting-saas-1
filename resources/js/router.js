@@ -5,6 +5,7 @@ import DashboardLayout from './pages/Layout/DashboardLayout'
 
 //Views
 import Gear from './pages/Gear'
+import NotFound from './components/NotFound'
 //import HomeComponent from './components/HomeComponent'
 import AboutComponent from './components/AboutComponent'
 
@@ -17,15 +18,21 @@ export default new VueRouter({
     component: DashboardLayout,
     routes: [
         { 
-            path: '/gear', 
+            path: '/', 
             component: DashboardLayout,
             children: [
                 {
-                    path: '/',
+                    path: '/gear',
                     name: 'Gear',
                     component: Gear
-                }
+                },
+                
             ]
+        },
+        {
+            path: '/*',
+            name: '404',
+            component: NotFound
         }
     ]
 })
